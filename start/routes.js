@@ -56,9 +56,9 @@ Route.group(()=>{
 
   Route.resource('/alunos', 'AlunoController')
     .apiOnly()
-    .validator(new Map([
-      [['store', 'update'], 'Aluno']
-    ]))
+    // .validator(new Map([
+    //   [['store', 'update'], 'Aluno']
+    // ]))
 
   Route.resource('/professores', 'ProfessorController')
     .apiOnly()
