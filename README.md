@@ -6,7 +6,7 @@ Backend de sistema acadêmico feito em NodeJS utilizando o framework AdonisJS.
 
 Criar um banco de dados no SGBD desejado. Exemplo de criação utilizando Mysql:
 ```bash
-CREATE SCHEMA 'academico' DEFAULT CHARACTER SET utf8;
+CREATE SCHEMA academico DEFAULT CHARACTER SET utf8;
 ```
 
 Para configurar o projeto, execute os seguintes comandos:
@@ -23,7 +23,7 @@ Após isso, execute os comandos a seguir:
 ```bash
 adonis key:generate
 adonis migration:run --seed
-adonis serve --run
+adonis serve --dev
 ```
 
 ### Documentação
