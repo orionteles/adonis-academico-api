@@ -54,11 +54,7 @@ Route.group(()=>{
 
   Route.get('/alunos/:id/turmas', 'AlunoController.turmas')
 
-  Route.resource('/alunos', 'AlunoController')
-    .apiOnly()
-    // .validator(new Map([
-    //   [['store', 'update'], 'Aluno']
-    // ]))
+
 
   Route.resource('/professores', 'ProfessorController')
     .apiOnly()
@@ -89,5 +85,12 @@ Route.group(()=>{
     .validator(new Map([
     [['store', 'update'], 'Semestre']
   ])) 
+  
+  Route.resource('/alunos', 'AlunoController')
+  .apiOnly()
+  .validator(new Map([
+    [['store', 'update'], 'Aluno']
+  ]))
 
-}).middleware('auth').prefix('api/v1')
+// }).middleware('auth').prefix('api/v1')
+})
